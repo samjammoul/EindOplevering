@@ -1,0 +1,122 @@
+       
+	   Schip:
+	   
+	   public double GewichtLinkerLading()
+        {
+            return LinkerKant.Gewichtlading;
+        }
+        public double GewichtRechtterLading()
+        {
+
+            return RechterKant.Gewichtlading;
+        }
+        public double MaxGewichtLinker()
+        {
+            return LinkerKant.MaxGewicht;
+        }
+        public double MaxGewichtREchter()
+        {
+            return RechterKant.MaxGewicht;
+        }
+
+        //Add Rij to all the sides
+        public void AddRijenVoorheleschip()
+        {
+            LinkerKant.AddRijenVoorHeleKanten();
+            RechterKant.AddRijenVoorHeleKanten();
+
+        }
+
+        //Get
+        public void GetRijenRechterVoorkant()
+        {
+            RechterKant.GetRijenVoorkant();
+        }
+        public List<Rij> GetRijenRechterMiddelKant()
+        {
+            return RechterKant.GetRijenMiddelKant();
+        }
+        public void GetRijenRechterAchterKant()
+        {
+            RechterKant.GetRijenAchterKant();
+        }
+        public void GetRijenLinkerVoorkant()
+        {
+            LinkerKant.GetRijenVoorkant();
+        }
+        public void GetRijenLinkerMiddelKant()
+        {
+            LinkerKant.GetRijenMiddelKant();
+        }
+        public void GetRijenLinkerAchterKant()
+        {
+            LinkerKant.GetRijenAchterKant();
+        }
+
+        // Get the count of all Rij in the sides
+        public int GetCountRechterVoorkant()
+        {
+            return RechterKant.GetCountVoorkant();
+        }
+        public int GetCountRechterMiddelKant()
+        {
+            return RechterKant.GetCountMiddelKant();
+        }
+        public int GetCountRechterAchterKant()
+        {
+            return RechterKant.GetCountAchterKant();
+        }
+        public int GetCountLinkerVoorkant()
+        {
+            return LinkerKant.GetCountVoorkant();
+        }
+        public int GetCountLinkerMiddelKant()
+        {
+            return LinkerKant.GetCountMiddelKant();
+        }
+        public int GetCountLinkerAchterKant()
+        {
+            return LinkerKant.GetCountAchterKant();
+        }
+
+        ////Add container to rij
+        //public void AddContainertorijRechterVoorkant(int RijNummer, Container c)
+        //{
+        //    RechterKant.AddContainerToRijVoorkant(RijNummer,c);
+        //}
+
+        //Add container to SchipList
+        public void AddContainertoSchipList(Container c)
+        {
+            SchipContiners.Add(c);
+        }
+
+        //Ik deel hier de continers aan de linker en rechter kant
+        public void SetContainersToRechterAndLinkerKant()
+        {
+            double sumR = 0;
+            double sumL = 0;
+            foreach (Container c in SchipContiners)
+            {
+                if ((sumR + c.Gewicht) <= RechterKant.MaxGewicht)
+                {
+                    sumR += c.Gewicht;
+                    RechterKant.addContainer(c);
+                }
+                else if ((sumL + c.Gewicht) <= LinkerKant.MaxGewicht)
+                {
+                    sumL += c.Gewicht;
+                    LinkerKant.addContainer(c);
+                }
+                else { }
+            }
+        }
+
+
+        // Set Containers To Kanten
+        public void AddContainersToKantenRechter() => RechterKant.AddContainersToKanten();
+        public void AddContainersToKantenLinker() => LinkerKant.AddContainersToKanten();
+
+        // show data aan user
+        public void showdataRechter() => RechterKant.showdata();
+        public void showdataLinker() => LinkerKant.showdata();

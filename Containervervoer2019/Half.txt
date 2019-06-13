@@ -1,0 +1,370 @@
+
+        public void AddRijenVoorHeleKanten()
+        {
+            VoorKant.addNewRij();
+            AchterKant.addNewRij();
+        }
+
+
+        public void GetRijenVoorkant()
+        {
+            VoorKant.GetRijen();
+        }
+
+
+        public void GetRijenAchterKant()
+        {
+            AchterKant.GetRijen();
+        }
+
+      //  Get rijen count
+        public int GetCountVoorkant()
+        {
+            return VoorKant.ListCount();
+        }
+        public int GetCountMiddelKant()
+        {
+            return MiddelKant.ListCount();
+        }
+        public int GetCountAchterKant()
+        {
+            return AchterKant.ListCount();
+        }
+
+       // Add container to Half list
+        public void addContainer(Container c)
+        {
+            Containers.Add(c);
+        }
+
+        Rest all lists
+        public void RestLists()
+        {
+            foreach (Rij r in VoorKant.GetRijen())
+            {
+                r.RestList();
+            }
+            foreach (Rij r in AchterKant.GetRijen())
+            {
+                r.RestList();
+            }
+            foreach (Rij r in MiddelKant.GetRijen())
+            {
+                r.RestList();
+            }
+        }
+
+
+
+        set Continers to Voorkant and middelKant and achterkant
+        public void AddContainersToKanten()
+        {
+            AddRijenVoorHeleKanten();
+
+
+            bool isAdded = false;
+            foreach (Container c in Containers)
+            {
+
+                if (c.ContainerType == "Gekolde")
+                {
+                    foreach (Rij r in VoorKant.GetRijen())
+                    {
+                        double sum = c.Gewicht + r.RijGewicht;
+
+                        if (r.BaseContainer == 0 && sum == 150)
+                        {
+                            r.BaseContainer = 1;
+                            c.ContainerPlek = "BaseContainer";
+                            r.RijGewicht += c.Gewicht;
+                            r.AddContainer(c);
+                            VoorKant.addNewRij();
+                        }
+                        else if (r.BaseContainer == 0 && sum < 150)
+                        {
+                            r.BaseContainer = 1;
+                            c.ContainerPlek = "BaseContainer";
+                            r.RijGewicht += c.Gewicht;
+                            r.AddContainer(c);
+                        }
+                        else if (sum == 150)
+                        {
+                            r.AddContainer(c);
+                            r.RijGewicht += c.Gewicht;
+                            VoorKant.addNewRij();
+                        }
+                        else if (sum < 150)
+                        {
+                            r.AddContainer(c);
+                            r.RijGewicht += c.Gewicht;
+
+                        }
+
+                    }
+
+
+                }
+                else if (c.ContainerType == "Waardevolle")
+                {
+
+                    foreach (Rij r in VoorKant.GetRijen())
+                    {
+                    stap1:
+                        double sum = c.Gewicht + r.RijGewicht;
+                        if (r.TopVanRij == 0 && sum == 150)
+                        {
+                            r.TopVanRij = 1;
+                            c.ContainerPlek = "TopContainer";
+                            r.RijGewicht += c.Gewicht;
+                            r.AddContainer(c);
+                            VoorKant.addNewRij();
+                            isAdded = true;
+                            break;
+                        }
+                        else if (r.TopVanRij == 0 && sum < 150)
+                        {
+                            r.TopVanRij = 1;
+                            c.ContainerPlek = "TopContainer";
+                            r.RijGewicht += c.Gewicht;
+                            r.AddContainer(c);
+                            isAdded = true;
+                            break;
+
+                        }
+                        else
+                        {
+                            VoorKant.addNewRij();
+                            goto stap1;
+
+                        }
+
+                    }
+                    if (isAdded == false)
+                    {
+                        foreach (Rij r in AchterKant.GetRijen())
+                        {
+                            double sum = c.Gewicht + r.RijGewicht;
+                            if (r.TopVanRij == 0 && sum == 150)
+                            {
+                                r.BaseContainer = 1;
+                                c.ContainerPlek = "TopContainer";
+                                r.RijGewicht += c.Gewicht;
+                                r.AddContainer(c);
+                                AchterKant.addNewRij();
+                                break;
+                            }
+                            else if (r.TopVanRij == 0 && sum < 150)
+                            {
+                                r.BaseContainer = 1;
+                                c.ContainerPlek = "TopContainer";
+                                r.RijGewicht += c.Gewicht;
+                                r.AddContainer(c);
+                                break;
+                            }
+
+
+                        }
+                    }
+
+                }
+                else if (c.ContainerType == "Normaalvolle")
+                {
+                    foreach (Rij r in VoorKant.GetRijen())
+                    {
+                        double sum = c.Gewicht + r.RijGewicht;
+                        if (sum == 150)
+                        {
+                            r.BaseContainer = 1;
+                            c.ContainerPlek = "Container";
+                            r.RijGewicht += c.Gewicht;
+                            r.AddContainer(c);
+                            VoorKant.addNewRij();
+                            break;
+                        }
+                        else if (sum < 150)
+                        {
+                            r.BaseContainer = 1;
+                            c.ContainerPlek = "Container";
+                            r.RijGewicht += c.Gewicht;
+                            r.AddContainer(c);
+                            break;
+                        }
+
+                    }
+                    if (isAdded == false)
+                    {
+                        foreach (Rij r in AchterKant.GetRijen())
+                        {
+                            double sum = c.Gewicht + r.RijGewicht;
+                            if (sum == 150)
+                            {
+                                r.BaseContainer = 1;
+                                c.ContainerPlek = "Container";
+                                r.RijGewicht += c.Gewicht;
+                                r.AddContainer(c);
+                                break;
+                            }
+                            else if (sum < 150)
+                            {
+                                r.BaseContainer = 1;
+                                c.ContainerPlek = "Container";
+                                r.RijGewicht += c.Gewicht;
+                                r.AddContainer(c);
+                                AchterKant.addNewRij();
+                                break;
+                            }
+
+                        }
+                    }
+                    if (isAdded == false)
+                    {
+                        foreach (Rij r in MiddelKant.GetRijen())
+                        {
+                            double sum = c.Gewicht + r.RijGewicht;
+                            if (sum == 150)
+                            {
+                                r.BaseContainer = 1;
+                                c.ContainerPlek = "Container";
+                                r.RijGewicht += c.Gewicht;
+                                r.AddContainer(c);
+                                MiddelKant.addNewRij();
+                                break;
+                            }
+                            else if (sum < 150)
+                            {
+                                r.BaseContainer = 1;
+                                c.ContainerPlek = "Container";
+                                r.RijGewicht += c.Gewicht;
+                                r.AddContainer(c);
+                                break;
+                            }
+
+                        }
+                    }
+                }
+                else if (c.ContainerType == "NormaalLeeg")
+                {
+
+                    foreach (Rij r in VoorKant.GetRijen())
+                    {
+                        double sum = c.Gewicht + r.RijGewicht;
+                        if (sum == 150)
+                        {
+                            r.BaseContainer = 1;
+                            c.ContainerPlek = "Container";
+                            r.RijGewicht += c.Gewicht;
+                            r.AddContainer(c);
+                            VoorKant.addNewRij();
+                            break;
+                        }
+                        else if (sum < 150)
+                        {
+                            r.BaseContainer = 1;
+                            c.ContainerPlek = "Container";
+                            r.RijGewicht += c.Gewicht;
+                            r.AddContainer(c);
+                            break;
+                        }
+
+                    }
+                    if (isAdded == false)
+                    {
+                        foreach (Rij r in AchterKant.GetRijen())
+                        {
+                            double sum = c.Gewicht + r.RijGewicht;
+                            if (sum == 150)
+                            {
+                                r.BaseContainer = 1;
+                                c.ContainerPlek = "Container";
+                                r.RijGewicht += c.Gewicht;
+                                r.AddContainer(c);
+                                AchterKant.addNewRij();
+                                break;
+                            }
+                            else if (sum < 150)
+                            {
+                                r.BaseContainer = 1;
+                                c.ContainerPlek = "Container";
+                                r.RijGewicht += c.Gewicht;
+                                r.AddContainer(c);
+                                break;
+                            }
+
+                        }
+                    }
+                    if (isAdded == false)
+                    {
+                        foreach (Rij r in MiddelKant.GetRijen())
+                        {
+                            double sum = c.Gewicht + r.RijGewicht;
+                            if (sum == 150)
+                            {
+                                r.BaseContainer = 1;
+                                c.ContainerPlek = "Container";
+                                r.RijGewicht += c.Gewicht;
+                                r.AddContainer(c);
+                                MiddelKant.addNewRij();
+                                break;
+                            }
+                            else if (sum < 150)
+                            {
+                                r.BaseContainer = 1;
+                                c.ContainerPlek = "Container";
+                                r.RijGewicht += c.Gewicht;
+                                r.AddContainer(c);
+                                break;
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+        Show data to User
+        public void showdata()
+        {
+            int Nummer = 0;
+            Console.WriteLine("VoorKant:");
+            foreach (Rij r in VoorKant.GetRijen())
+            {
+                Nummer += 1;
+                Console.WriteLine("Rij" + " " + Nummer + ":");
+                foreach (Container c in r.RijContainers())
+                {
+                    Console.WriteLine(c.ContainerType + "||" + c.ContainerPlek);
+                }
+
+            }
+            Console.WriteLine("MidellKant:");
+            foreach (Rij r in MiddelKant.GetRijen())
+            {
+                Nummer += 1;
+                Console.WriteLine("Rij" + " " + Nummer + ":");
+                foreach (Container c in r.RijContainers())
+                {
+                    Console.WriteLine(c.ContainerType + "||" + c.ContainerPlek);
+                }
+
+            }
+            Console.WriteLine("AchterKant:");
+            foreach (Rij r in AchterKant.GetRijen())
+            {
+                Nummer += 1;
+                Console.WriteLine("Rij" + " " + Nummer + ":");
+                foreach (Container c in r.RijContainers())
+                {
+                    Console.WriteLine(c.ContainerType + "||" + c.ContainerPlek);
+                }
+
+            }
+        }
+
+
+        //Add Container to kant
+        public void AddContainerToRijVoorkant(int RijNummer, Container c)
+        {
+            VoorKant.AddContainer(RijNummer, c);
+        }

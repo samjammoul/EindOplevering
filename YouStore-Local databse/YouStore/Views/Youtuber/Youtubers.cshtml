@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Models.Youtuber>
+
+@{
+    ViewData["Title"] = "Youtubers";
+    Layout = "~/Views/Shared/_AdminView.cshtml";
+}
+
+<h2>Youtubers</h2>
+
+<p>
+    <a asp-controller="Youtuber" asp-action="AddYoutuber">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.YoutuberName)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.YoutuberImage)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.YoutuberName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YoutuberImage)
+            </td>
+            <td>
+                <span type="button" title="Edit" value=" " onclick="location.href='/Youtuber/EditYoutuberInformatie/@Html.DisplayFor(modelItem => item.YoutuberId)'">Edit</span> |
+                <span class="glyphicon glyphicon-trash" type="button" title="Delete" value=" " onclick="location.href='/YouTuber/DeletYoutuber/YoutuberId?=@Html.DisplayFor(modelItem => item.YoutuberId)'"></span>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

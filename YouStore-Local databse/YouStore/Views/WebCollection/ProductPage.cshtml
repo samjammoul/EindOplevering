@@ -1,0 +1,66 @@
+﻿@model Models.Product
+
+@{
+    ViewData["Title"] = "ProductPage";
+    Layout = "~/Views/Shared/_LayoutClient.cshtml";
+}
+
+
+
+
+
+
+<body>
+
+    <h1 class="ProductName">@Html.DisplayFor(model => model.ProductName)</h1>
+    <div>
+        <img class="productimg" src="~/images/@Html.DisplayFor(model => model.Productimagelink)" alt="Denim Jeans">
+    </div>
+    <div class="price">
+        <p> PRIJS: $@Html.DisplayFor(model => model.ProductPrijs)</p>
+    </div>
+    <div class="Desc">
+        <p>@Html.DisplayFor(model => model.ProductDescription)</p>
+    </div>
+
+    <div>
+        <button type="button" class="Buy btn-danger glyphicon " onclick="location.href='/ShoppingBasket/AddProductsToShoppingBasket/id?=@Html.DisplayFor(model => model.ProductId)'">Add</button>
+    </div>
+
+
+
+</body>
+
+<style>
+    .productimg {
+        width: 28%;
+        height: 53%;
+        padding-bottom: 10px;
+        margin-bottom: -483px;
+    }
+
+    .Desc {
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-left: 682px;
+        color: brown;
+        font-size: 22px;
+    }
+
+    .ProductName {
+        padding-left: 20px;
+        margin-top: 15px;
+    }
+
+    .price {
+        padding-left: 694px;
+        color: grey;
+        font-size: 22px;
+    }
+
+    .Buy {
+        margin-left: 732px;
+        font-size: 20px;
+    }
+</style>
+

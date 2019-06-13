@@ -1,0 +1,8 @@
+C:\Users\Sam\source\repos\Containervervoer2019\.vs\Containervervoer2019\lut\0\b\Containervervoer2019Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Sam\source\repos\Containervervoer2019\.vs\Containervervoer2019\lut\0\b\Containervervoer2019Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Sam\source\repos\Containervervoer2019\.vs\Containervervoer2019\lut\0\b\Containervervoer2019Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Sam\source\repos\Containervervoer2019\.vs\Containervervoer2019\lut\0\b\Containervervoer2019Tests\bin\Debug\Containervervoer2019Tests.dll
+C:\Users\Sam\source\repos\Containervervoer2019\.vs\Containervervoer2019\lut\0\i\Containervervoer2019Tests\Debug\Containervervoer2019Tests.csproj.CoreCompileInputs.cache
+C:\Users\Sam\source\repos\Containervervoer2019\.vs\Containervervoer2019\lut\0\i\Containervervoer2019Tests\Debug\Containervervoer2019Tests.csproj.CopyComplete
+C:\Users\Sam\source\repos\Containervervoer2019\.vs\Containervervoer2019\lut\0\i\Containervervoer2019Tests\Debug\Containervervoer2019Tests.dll
+C:\Users\Sam\source\repos\Containervervoer2019\.vs\Containervervoer2019\lut\0\i\Containervervoer2019Tests\Debug\Containervervoer2019Tests.csprojAssemblyReference.cache

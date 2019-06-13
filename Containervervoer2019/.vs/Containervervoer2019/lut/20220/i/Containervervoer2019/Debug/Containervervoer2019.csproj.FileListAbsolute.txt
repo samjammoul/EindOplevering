@@ -1,0 +1,6 @@
+C:\Users\Sam\source\repos\Containervervoer2019\.vs\Containervervoer2019\lut\0\b\Containervervoer2019\bin\Debug\Containervervoer2019.exe.config
+C:\Users\Sam\source\repos\Containervervoer2019\.vs\Containervervoer2019\lut\0\b\Containervervoer2019\bin\Debug\Containervervoer2019.exe
+C:\Users\Sam\source\repos\Containervervoer2019\.vs\Containervervoer2019\lut\0\i\Containervervoer2019\Debug\Containervervoer2019.csproj.CoreCompileInputs.cache
+C:\Users\Sam\source\repos\Containervervoer2019\.vs\Containervervoer2019\lut\0\i\Containervervoer2019\Debug\Containervervoer2019.csproj.CopyComplete
+C:\Users\Sam\source\repos\Containervervoer2019\.vs\Containervervoer2019\lut\0\i\Containervervoer2019\Debug\Containervervoer2019.exe
+C:\Users\Sam\source\repos\Containervervoer2019\.vs\Containervervoer2019\lut\0\i\Containervervoer2019\Debug\Containervervoer2019.csprojAssemblyReference.cache

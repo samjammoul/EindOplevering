@@ -1,0 +1,7 @@
+C:\Users\Sam\source\repos\CircustreinNew\CircustreinNew\bin\Debug\CircustreinNew.exe.config
+C:\Users\Sam\source\repos\CircustreinNew\CircustreinNew\bin\Debug\CircustreinNew.exe
+C:\Users\Sam\source\repos\CircustreinNew\CircustreinNew\bin\Debug\CircustreinNew.pdb
+C:\Users\Sam\source\repos\CircustreinNew\CircustreinNew\obj\Debug\CircustreinNew.csprojAssemblyReference.cache
+C:\Users\Sam\source\repos\CircustreinNew\CircustreinNew\obj\Debug\CircustreinNew.csproj.CoreCompileInputs.cache
+C:\Users\Sam\source\repos\CircustreinNew\CircustreinNew\obj\Debug\CircustreinNew.exe
+C:\Users\Sam\source\repos\CircustreinNew\CircustreinNew\obj\Debug\CircustreinNew.pdb

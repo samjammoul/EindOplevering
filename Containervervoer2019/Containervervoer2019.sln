@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Containervervoer2019", "Containervervoer2019\Containervervoer2019.csproj", "{71D6C979-E645-4A9D-908E-D308E6D3E4A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Containervervoer2019Tests", "Containervervoer2019Tests\Containervervoer2019Tests.csproj", "{3716930B-2771-4F98-A063-8F76EF858CBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{E399A465-E5C1-413E-A0F5-9E6E201CAAA4}"
+	ProjectSection(SolutionItems) = preProject
+		Half.txt = Half.txt
+		Schip.txt = Schip.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71D6C979-E645-4A9D-908E-D308E6D3E4A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71D6C979-E645-4A9D-908E-D308E6D3E4A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71D6C979-E645-4A9D-908E-D308E6D3E4A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71D6C979-E645-4A9D-908E-D308E6D3E4A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3716930B-2771-4F98-A063-8F76EF858CBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3716930B-2771-4F98-A063-8F76EF858CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3716930B-2771-4F98-A063-8F76EF858CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3716930B-2771-4F98-A063-8F76EF858CBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02EFBC66-B62C-44E5-8F6C-1A73B18E1BB9}
+	EndGlobalSection
+EndGlobal

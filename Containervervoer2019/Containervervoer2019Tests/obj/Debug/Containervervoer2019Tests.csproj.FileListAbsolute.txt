@@ -1,0 +1,17 @@
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\bin\Debug\Containervervoer2019Tests.dll
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\bin\Debug\Containervervoer2019Tests.pdb
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\bin\Debug\Containervervoer2019.exe
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\bin\Debug\Containervervoer2019.pdb
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\bin\Debug\Containervervoer2019.exe.config
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\obj\Debug\Containervervoer2019Tests.csprojAssemblyReference.cache
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\obj\Debug\Containervervoer2019Tests.csproj.CoreCompileInputs.cache
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\obj\Debug\Containervervoer2019Tests.csproj.CopyComplete
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\obj\Debug\Containervervoer2019Tests.dll
+C:\Users\Sam\source\repos\Containervervoer2019\Containervervoer2019Tests\obj\Debug\Containervervoer2019Tests.pdb
